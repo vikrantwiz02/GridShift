@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { useCurrentSchedule } from "@/hooks/useSchedule";
 import ScheduleGantt from "@/components/charts/ScheduleGantt";
 import PriceHeatmap from "@/components/charts/PriceHeatmap";
-import type { WorkloadBlock } from "@/types";
 
 // Static 7-day price profile (JEPX 2024 Kanto averages) for the heatmap.
 // In production this would come from the DB via GET /energy/actuals.

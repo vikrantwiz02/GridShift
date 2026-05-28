@@ -1,0 +1,13 @@
+[Unit]
+Description=GridShift React frontend (static)
+After=network.target
+
+[Service]
+User=fusion
+WorkingDirectory=/home/fusion/Vikrant/GridShift/frontend
+ExecStart=/home/fusion/.nvm/versions/node/v22.22.3/bin/npx serve dist -l 3020 --single
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=GridShift FastAPI backend
+After=network.target postgresql.service
+
+[Service]
+User=fusion
+WorkingDirectory=/home/fusion/Vikrant/GridShift
+EnvironmentFile=/home/fusion/Vikrant/GridShift/.env
+ExecStart=/home/fusion/Vikrant/GridShift/.venv/bin/uvicorn backend.main:app --host 127.0.0.1 --port 8280 --workers 1
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

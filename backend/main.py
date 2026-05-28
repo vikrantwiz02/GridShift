@@ -26,6 +26,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "https://*.vercel.app",
+        "https://gridshift.vikrantkumar.site",
     ],
     allow_credentials=True,
     allow_methods=["*"],
